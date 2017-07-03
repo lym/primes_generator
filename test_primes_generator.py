@@ -14,5 +14,10 @@ class TestPrimesGenerator(unittest.TestCase):
         result = generate_primes(n)
         self.assertLessEqual(max(result), n)
 
+    def test_lowest_prime(self):
+        n = 30
+        result = generate_primes(n)
+        self.assertLessEqual(min(result), 2)
+
 if __name__ == '__main__':
     unittest.main()
