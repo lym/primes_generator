@@ -9,5 +9,10 @@ class TestPrimesGenerator(unittest.TestCase):
         for num in result:
             self.assertNotIn(num, known_composites)
 
+    def test_range(self):
+        n = 30
+        result = generate_primes(n)
+        self.assertLessEqual(max(result), n)
+
 if __name__ == '__main__':
     unittest.main()
